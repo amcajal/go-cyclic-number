@@ -7,7 +7,7 @@ import (
 
 // Check if two numbers have the same digits,
 // no matter their position (i.e: 123 and 312 are "equal")
-func CheckPermutation(leftN, rightN int) (result bool) {
+func checkPermutation(leftN, rightN int) (result bool) {
 	if leftN == rightN {
 		return true
 	}
@@ -50,7 +50,7 @@ func CheckPermutation(leftN, rightN int) (result bool) {
 func IsCyclic(number, factor int) bool {
 	var result bool
 	multiplication := number * factor
-	if CheckPermutation(number, multiplication) {
+	if checkPermutation(number, multiplication) {
 		if factor < 6 {
 			result = IsCyclic(number, factor+1)
 		} else {
