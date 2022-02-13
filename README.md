@@ -9,3 +9,4 @@ GDB was used to check how debugging in Go works. So far, it worked well. Need to
 Second version: statements working as tests have been moved from "main.go" file to proper "_test.go" file. Creation of test cases is quite easy. Followed the tutorial at
 https://go.dev/doc/tutorial/add-a-test
 
+Third version: a "resources usage" test is added to the cyclic_test.go, in order to retrieve profiling information. Profiling in go is quite easy with the "go test <profiling-flags>" and "go tool pprof". Profiling performed follown tutorial at https://golangdocs.com/profiling-in-golang
