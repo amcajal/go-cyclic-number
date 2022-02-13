@@ -10,3 +10,11 @@ Second version: statements working as tests have been moved from "main.go" file 
 https://go.dev/doc/tutorial/add-a-test
 
 Third version: a "resources usage" test is added to the cyclic_test.go, in order to retrieve profiling information. Profiling in go is quite easy with the "go test <profiling-flags>" and "go tool pprof". Profiling performed follown tutorial at https://golangdocs.com/profiling-in-golang
+
+Fourth version: https://github.com/amcajal/go-cyclic-number/commit/9f9c322769e856a29e0f73eb1636b63ff9fe4e6b
+  
+In the fourth version, "IsCyclic" is modified, so instead of being a recursive function, it performs a plain for loop, generating the same results (but increasing the overall readability of the function). This change is good to test the TDD principles:
+- Test goes first: it is changed; Test does not compile (good)
+- Source code is modified; Test then compiles and still passing (good)
+  
+However, no performance improvements take place with this change.
