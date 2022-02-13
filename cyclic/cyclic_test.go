@@ -68,3 +68,12 @@ func TestCyclicNumbers(t *testing.T) {
 		t.Fatalf("2245 is NOT cyclic")
 	}
 }
+
+func TestResourceUsage(t *testing.T) {
+	matches := 0
+	for i := 0; matches < 3; i++ { // Ugly loop, but feeling nasty
+		if IsCyclic(i, 2) {
+			matches++
+		}
+	}
+}
