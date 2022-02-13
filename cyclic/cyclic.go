@@ -46,19 +46,12 @@ func checkPermutation(leftN, rightN int) (result bool) {
 	return true
 }
 
-// Recursive function: check permutations for multipliers from 2 to 6
-func IsCyclic(number, factor int) bool {
-	var result bool
-	multiplication := number * factor
-	if checkPermutation(number, multiplication) {
-		if factor < 6 {
-			result = IsCyclic(number, factor+1)
-		} else {
-			result = true
-		}
-	} else {
-		result = false
-	}
-
-	return result
+// Check permutations for multipliers from 2 to 6
+func IsCyclic(number int) bool {
+    for i:= 2; i <= 6; i++ {
+        if !checkPermutation(number*i, number) {
+            return false
+        }
+    }
+    return true
 }

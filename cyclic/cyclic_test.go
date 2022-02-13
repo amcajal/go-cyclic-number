@@ -54,17 +54,17 @@ func TestPermutationChecking(t *testing.T) {
 
 func TestCyclicNumbers(t *testing.T) {
 	// Zero is a special case, but still meeting the requirements
-	if r := IsCyclic(0, 2); !r {
+	if r := IsCyclic(0); !r {
 		t.Fatalf("Zero is cyclic")
 	}
 
 	// Here, a more aggresive test could be done, testing a lot of numbers
 	// and breaking if any of them but the correct one reports a true
-	if r := IsCyclic(142857, 2); !r {
+	if r := IsCyclic(142857); !r {
 		t.Fatalf("142857 is cyclic")
 	}
 
-	if r := IsCyclic(2245, 2); r {
+	if r := IsCyclic(2245); r {
 		t.Fatalf("2245 is NOT cyclic")
 	}
 }
@@ -72,7 +72,7 @@ func TestCyclicNumbers(t *testing.T) {
 func TestResourceUsage(t *testing.T) {
 	matches := 0
 	for i := 0; matches < 3; i++ { // Ugly loop, but feeling nasty
-		if IsCyclic(i, 2) {
+		if IsCyclic(i) {
 			matches++
 		}
 	}

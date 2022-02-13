@@ -8,7 +8,7 @@ import (
 func main() {
 	matches := 0
 	for i := 0; matches < 3; i++ { // Ugly loop, but feeling nasty
-		if cyclic.IsCyclic(i, 2) {
+		if cyclic.IsCyclic(i) {
 			fmt.Printf("Cyclic number found: %v\n", i)
 			matches++
 		}
