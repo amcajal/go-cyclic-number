@@ -18,3 +18,5 @@ In the fourth version, "IsCyclic" is modified, so instead of being a recursive f
 - Source code is modified; Test then compiles and still passing (good)
   
 However, no performance improvements take place with this change.
+  
+Test coverage is already at 100%. Test coverage is really easy to obtain using the "go test -cover" command and "go tool" commands (see https://golangdocs.com/code-coverage-in-golang)
